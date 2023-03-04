@@ -16,6 +16,8 @@
 - [x] NextJS
 - [x] Storybook
 - [x] Fetch API
+- [x] Tailwind UI
+- [ ] Nivo Chart
 - [x] Jest
 - [x] Testing Library
 
