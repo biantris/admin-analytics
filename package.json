@@ -1,24 +1,24 @@
 {
   "name": "admin-analytics",
-  "author": "Beatriz Oliveira",
-  "description": "A SPA and API REST to Admin dashboard",
   "version": "0.1.0",
   "private": true,
+  "description": "A SPA Admin dashboard",
+  "author": "Beatriz Oliveira",
   "homepage": "REPO_URL",
   "engines": {
     "node": ">=14.0.0",
-    "yarn": ">=1.22.0",
-    "npm": "please-use-yarn"
+    "npm": "please-use-yarn",
+    "yarn": ">=1.22.0"
   },
   "scripts": {
-    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
-    "start": "next start",
+    "build-storybook": "build-storybook",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "lint": "next lint",
-    "prettier": "prettier --write .",
     "prepare": "husky install",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "prettier": "prettier --write .",
+    "start": "next start",
+    "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
     "next": "12.1.4",
