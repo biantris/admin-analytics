@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "description": "A SPA Admin dashboard",
-  "author": "Beatriz Oliveira",
+  "author": "Beatriz Oliveira <anabeatrizxoliveira@gmail.com>",
   "homepage": "REPO_URL",
   "engines": {
     "node": ">=14.0.0",
@@ -21,9 +21,17 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
+    "@headlessui/react": "^1.6.6",
+    "@heroicons/react": "^1.0.6",
+    "@tailwindcss/forms": "^0.5.2",
+    "@types/uuid": "^8.3.4",
+    "nookies": "^2.5.2",
+    "axios": "^0.27.2",
     "next": "12.1.4",
     "react": "18.0.0",
-    "react-dom": "18.0.0"
+    "react-dom": "18.0.0",
+    "react-hook-form": "^7.33.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

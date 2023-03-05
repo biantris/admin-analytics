@@ -1,7 +1,12 @@
 import type { AppProps } from 'next/app';
-import '../styles/globals.css';
+import 'tailwindcss/tailwind.css';
+import { AuthProvider } from '../context/AuthContext';
 
 export default function App({ Component, pageProps }: AppProps) {
-  //@ts-ignore
-  return <Component {...pageProps} />;
+  return (
+    <AuthProvider>
+      {/* @ts-ignore */}
+      <Component {...pageProps} />
+    </AuthProvider>
+  );
 }
