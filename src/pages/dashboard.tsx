@@ -47,17 +47,19 @@ const Dashboard = () => {
                         itemIdx === 0 ? (
                           <Fragment key={item}>
                             {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
+                            {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                             <a
-                              href="#"
+                              href="/dashboard"
                               className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
                             >
                               {item}
                             </a>
                           </Fragment>
                         ) : (
+                          // eslint-disable-next-line @next/next/no-html-link-for-pages
                           <a
                             key={item}
-                            href="#"
+                            href="/user"
                             className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                           >
                             {item}
@@ -207,7 +209,7 @@ const Dashboard = () => {
                     href="#"
                     className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                   >
-                    Sign out
+                    Sair
                   </a>
                 </div>
               </div>
