@@ -21,6 +21,7 @@
 - [x] React Hook Form
 - [x] Jest
 - [x] Testing Library
+- [ ] Vercel (Deploy)
 
 ### Project architecture
 [wip]
