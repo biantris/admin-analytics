@@ -18,6 +18,7 @@
 - [x] Fetch API
 - [x] Tailwind UI
 - [ ] Nivo Chart
+- [x] React Hook Form
 - [x] Jest
 - [x] Testing Library
 
