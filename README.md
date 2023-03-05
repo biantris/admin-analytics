@@ -15,13 +15,13 @@
 
 - [x] NextJS
 - [x] Storybook
-- [x] Fetch API
+- [x] Axios
 - [x] Tailwind UI
 - [ ] Nivo Chart
 - [x] React Hook Form
 - [x] Jest
 - [x] Testing Library
-- [ ] Vercel (Deploy)
+- [x] Vercel (Deploy)
 
 ### Project architecture
 [wip]
@@ -46,4 +46,4 @@ http://localhost:3000
 ```
  
 ## demo
-[wip]
+🔗 https://admin-analytics.vercel.app/
