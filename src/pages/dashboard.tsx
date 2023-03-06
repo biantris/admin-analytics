@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 import { ChartPie, data } from '../components/ChartPie';
 import { Nav } from '../components/Nav';
+import { WrapperDash } from '../components/WrapperDash';
 
 const Dashboard = () => {
   return (
@@ -19,34 +20,28 @@ const Dashboard = () => {
       </header>
 
       <main>
-        <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
-          <div className="px-4 py-6 sm:px-0">
-            <div className="border-4 border-dashed border-gray-200 rounded-lg justify-center h-full w-full">
-              <div className="flex flex-col md:flex-row justify-center h-full w-full">
-                <div className="flex flex-col justify-center p-1 h-full">
-                  <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
-                    Consumo de CPU
-                  </h2>
-                  <ChartPie data={data} />
-                </div>
-
-                <div className="flex flex-col justify-center p-1 h-full">
-                  <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
-                    Consumo de Memória
-                  </h2>
-                  <ChartPie data={data} />
-                </div>
-
-                <div className="flex flex-col justify-center p-1 h-full">
-                  <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
-                    Status do Cluster
-                  </h2>
-                  <ChartPie data={data} />
-                </div>
-              </div>
-            </div>
+        <WrapperDash>
+          <div className="flex flex-col justify-center p-1 h-96 w-80">
+            <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
+              Consumo de CPU
+            </h2>
+            <ChartPie data={data} />
           </div>
-        </div>
+
+          <div className="flex flex-col justify-center p-1 h-96 w-80">
+            <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
+              Consumo de Memória
+            </h2>
+            <ChartPie data={data} />
+          </div>
+
+          <div className="flex flex-col justify-center p-1 h-96 w-80">
+            <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
+              Status do Cluster
+            </h2>
+            <ChartPie data={data} />
+          </div>
+        </WrapperDash>
       </main>
     </div>
   );
