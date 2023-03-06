@@ -21,7 +21,7 @@
 - [x] [Storybook](https://storybook.js.org/)
 - [x] [Axios](https://axios-http.com/)
 - [x] [Tailwind CSS](https://tailwindcss.com/)
-- [ ] [Nivo Chart](https://nivo.rocks/)
+- [x] [Nivo Chart](https://nivo.rocks/)
 - [x] [React Hook Form](https://react-hook-form.com/)
 - [ ] [Jest](https://jestjs.io/)
 - [ ] [React Testing Library](https://testing-library.com/)
