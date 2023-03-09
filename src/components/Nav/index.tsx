@@ -74,8 +74,10 @@ export const Nav = () => {
                         <div>
                           <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                             <span className="sr-only">Open user menu</span>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               className="h-8 w-8 rounded-full"
+                              //@ts-ignore
                               src={user?.avatar_url}
                               alt=""
                             />
