@@ -20,6 +20,7 @@
 - [x] [Next Auth](https://next-auth.js.org/)
 - [x] [Storybook](https://storybook.js.org/)
 - [x] [Axios](https://axios-http.com/)
+- [x] [Yup](https://github.com/jquense/yup)
 - [x] [Tailwind CSS](https://tailwindcss.com/)
 - [x] [Nivo Chart](https://nivo.rocks/)
 - [x] [React Hook Form](https://react-hook-form.com/)
