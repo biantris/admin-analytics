@@ -1,8 +1,8 @@
 import Head from 'next/head';
 
-import { ChartPie, data } from '../components/ChartPie';
-import { Nav } from '../components/Nav';
-import { WrapperDash } from '../components/WrapperDash';
+import { ChartPie, data } from '../../components/ChartPie';
+import { Nav } from '../../components/Nav';
+import { WrapperDash } from '../../components/WrapperDash';
 
 const Dashboard = () => {
   return (

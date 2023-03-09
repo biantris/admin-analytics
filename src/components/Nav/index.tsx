@@ -2,7 +2,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Fragment, useContext, useEffect } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import { api } from '../../service/api';
+import { api } from '../../service/apiClient';
 
 const navigation = ['Dashboard', 'Usuários'];
 const profile = ['Perfil'];
@@ -74,9 +74,10 @@ export const Nav = () => {
                         <div>
                           <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                             <span className="sr-only">Open user menu</span>
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               className="h-8 w-8 rounded-full"
-                              src={user?.avatar_url}
+                              src={'/img/profile-share.png'}
                               alt=""
                             />
                           </Menu.Button>
@@ -169,7 +170,7 @@ export const Nav = () => {
                 <div className="flex-shrink-0">
                   <img
                     className="h-10 w-10 rounded-full"
-                    src={user?.avatar_url}
+                    src={'/img/profile-share.png'}
                     alt=""
                   />
                 </div>
