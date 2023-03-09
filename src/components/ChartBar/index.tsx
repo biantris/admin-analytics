@@ -1,6 +1,6 @@
-import { ResponsivePie } from '@nivo/pie';
+import { ResponsiveBar } from '@nivo/bar';
 
-export const dataPie = [
+export const dataBar = [
   {
     id: 'c',
     label: 'c',
@@ -63,12 +63,11 @@ export const dataPie = [
 ];
 
 //@ts-ignore
-export const ChartPie = ({ data }) => (
-  <ResponsivePie
+export const ChartBar = ({ data }) => (
+  <ResponsiveBar
     data={data}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
     innerRadius={0.5}
-    isInteractive={false}
     padAngle={0.7}
     cornerRadius={3}
     activeOuterRadiusOffset={8}
