@@ -77,8 +77,7 @@ export const Nav = () => {
                             {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                               className="h-8 w-8 rounded-full"
-                              //@ts-ignore
-                              src={user?.avatar_url}
+                              src={'/img/profile-share.png'}
                               alt=""
                             />
                           </Menu.Button>
@@ -171,7 +170,7 @@ export const Nav = () => {
                 <div className="flex-shrink-0">
                   <img
                     className="h-10 w-10 rounded-full"
-                    src={user?.avatar_url}
+                    src={'/img/profile-share.png'}
                     alt=""
                   />
                 </div>
