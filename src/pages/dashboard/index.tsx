@@ -1,6 +1,8 @@
 import Head from 'next/head';
 
-import { ChartPie, data } from '../../components/ChartPie';
+import { ChartBar, dataBar } from '../../components/ChartBar';
+import { ChartPie, dataPie } from '../../components/ChartPie';
+
 import { Nav } from '../../components/Nav';
 import { WrapperDash } from '../../components/WrapperDash';
 
@@ -25,21 +27,25 @@ const Dashboard = () => {
             <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
               Consumo de CPU
             </h2>
-            <ChartPie data={data} />
+            <ChartBar data={dataBar} />
           </div>
 
           <div className="flex flex-col justify-center p-1 h-96 w-80">
             <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
               Consumo de Memória
             </h2>
-            <ChartPie data={data} />
+            <ChartPie data={dataPie} />
           </div>
 
           <div className="flex flex-col justify-center p-1 h-96 w-80">
             <h2 className="mt-6 text-center text-1xl font-normal text-gray-900">
               Status do Cluster
             </h2>
-            <ChartPie data={data} />
+            <div className="flex flex-col justify-center items-center pt-36 pb-40">
+              <span className="bg-green-100 text-green-800 text-xs font-medium w-40 text-center px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300">
+                Green
+              </span>
+            </div>
           </div>
         </WrapperDash>
       </main>

@@ -37,7 +37,6 @@ export const Nav = () => {
                     {navigation.map((item, itemIdx) =>
                       itemIdx === 0 ? (
                         <Fragment key={item}>
-                          {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                           {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                           <a
                             href="/dashboard"
