@@ -2,7 +2,7 @@ import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Fragment, useContext, useEffect } from 'react';
 import { AuthContext } from '../../context/AuthContext';
-import { api } from '../../service/api';
+import { api } from '../../service/apiClient';
 
 const navigation = ['Dashboard', 'Usuários'];
 const profile = ['Perfil'];

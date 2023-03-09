@@ -27,13 +27,17 @@
     "@nivo/pie": "^0.80.0",
     "@tailwindcss/forms": "^0.5.2",
     "@types/uuid": "^8.3.4",
+    "@hookform/resolvers": "^2.9.11",
     "axios": "^0.27.2",
+    "jwt-decode": "^3.1.2",
     "next": "12.1.4",
     "nookies": "^2.5.2",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-hook-form": "^7.33.1",
-    "uuid": "^8.3.2"
+    "react-toastify": "^9.1.1",
+    "uuid": "^8.3.2",
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",
