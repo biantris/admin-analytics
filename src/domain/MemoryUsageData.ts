@@ -7,7 +7,7 @@ export interface IMemoryUsageData {
   data: DataType;
 }
 
-export const mapPatient = (memoryUsageData: IMemoryUsageData) => ({
+export const mapUsageData = (memoryUsageData: IMemoryUsageData) => ({
   ...memoryUsageData,
 });
 
