@@ -15,6 +15,7 @@ export const createAuthenticationUser = async ({
   const data = { email, password };
   try {
     const response = await ApiClient.post(AuthUser, data);
+
     return response.data;
   } catch (error) {
     return error;

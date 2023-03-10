@@ -40,6 +40,7 @@ const Login = () => {
 
     try {
       await signIn(data);
+
       setTimeout(() => {
         setLoading(false);
       }, 2000);
