@@ -1,20 +1,28 @@
 import { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import { getClusterStatusInfo } from '../../service/helthCheckApi/helthCheck';
 import { withSSRAuth } from '../../utils/auth/withSSRAuth';
 
-import { ChartBar, dataBar } from '../../components/ChartBar';
-import { ChartPie, dataPie } from '../../components/ChartPie';
-
 import { memo } from 'react';
+import { ChartPie } from '../../components/ChartPie';
 import { Nav } from '../../components/Nav';
 import { WrapperDash } from '../../components/WrapperDash';
+import { mapMemoryUsageData } from '../../domain/MemoryUsageData';
+import {
+  getClusterStatusInfo,
+  getMemoryUsageData,
+} from '../../service/helthCheckApi/helthCheck';
+
+export type DataType = {
+  labels: string[];
+  data: number[];
+};
 
 interface IDashboardProps {
   status: string;
+  dataPieMemory: DataType;
 }
 
-const Dashboard = ({ status }: IDashboardProps) => {
+const Dashboard = ({ status, dataPieMemory }: IDashboardProps) => {
   return (
     <div>
       <Head>
@@ -35,14 +43,14 @@ const Dashboard = ({ status }: IDashboardProps) => {
             <h2 className="mt-6 text-center text-1xl font-semibold text-gray-900">
               Consumo de CPU
             </h2>
-            <ChartBar data={dataBar} />
+            {/* <ChartPie data={dataPie} /> */}
           </div>
 
           <div className="flex flex-col justify-center p-1 h-96 w-80">
             <h2 className="mt-6 text-center text-1xl font-semibold text-gray-900">
               Consumo de Memória
             </h2>
-            <ChartPie data={dataPie} />
+            <ChartPie data={dataPieMemory} />
           </div>
 
           <div className="flex flex-col justify-center p-1 h-96 w-80">
@@ -64,10 +72,13 @@ const Dashboard = ({ status }: IDashboardProps) => {
 export const getServerSideProps: GetServerSideProps = withSSRAuth(
   async (ctx) => {
     const { status } = await getClusterStatusInfo({ ctx });
+    const dataPieMemory = await getMemoryUsageData({ ctx });
+    const listMemoryUsageData = mapMemoryUsageData(dataPieMemory);
 
     return {
       props: {
-        status: String(status),
+        status,
+        dataPieMemory: listMemoryUsageData,
       },
     };
   }

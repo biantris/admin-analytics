@@ -1,11 +1,17 @@
+/* eslint-disable @next/next/no-img-element */
 /* eslint-disable @next/next/no-html-link-for-pages */
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Fragment } from 'react';
+import { validateUserPermissions } from '../../utils/auth/validateUserPermissions';
+
+import useAuth from '../../hooks/useAuth';
 
 const navigation = ['Dashboard', 'Usuários'];
 
 export const Nav = () => {
+  const { user } = useAuth();
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -33,13 +39,17 @@ export const Nav = () => {
                           </a>
                         </Fragment>
                       ) : (
-                        <a
-                          key={item}
-                          href="/user"
-                          className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                        >
-                          {item}
-                        </a>
+                        <>
+                          {user !== null && validateUserPermissions(user) && (
+                            <a
+                              key={item}
+                              href="/user"
+                              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                            >
+                              {item}
+                            </a>
+                          )}
+                        </>
                       )
                     )}
                   </div>
@@ -132,13 +142,17 @@ export const Nav = () => {
                     </a>
                   </Fragment>
                 ) : (
-                  <a
-                    key={item}
-                    href="/user"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                  >
-                    {item}
-                  </a>
+                  <>
+                    {user !== null && validateUserPermissions(user) && (
+                      <a
+                        key={item}
+                        href="/user"
+                        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                      >
+                        {item}
+                      </a>
+                    )}
+                  </>
                 )
               )}
             </div>
@@ -161,10 +175,10 @@ export const Nav = () => {
 
                 <div className="ml-3">
                   <div className="text-base font-medium leading-none text-white">
-                    Beatriz Oliveira
+                    {user?.name}
                   </div>
                   <div className="text-sm font-medium leading-none text-gray-400">
-                    anabeatrizxoliveira@gmail.com
+                    {user?.email}
                   </div>
                 </div>
 
