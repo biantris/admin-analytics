@@ -1,23 +1,13 @@
-type User = {
-  roles: string[];
-};
+import { User } from '../../context/AuthContext';
 
-type ValidateUserPermissionsParams = {
-  user: User;
-  roles?: string[];
-};
+export const validateUserPermissions = (user: User) => {
+  try {
+    const { access_level } = user;
 
-export const validateUserPermissions = ({
-  user,
-  roles,
-}: ValidateUserPermissionsParams) => {
-  if (roles) {
-    if (roles?.length > 0) {
-      const hasAllRoles = roles.every((role) => user.roles.includes(role));
+    if (access_level !== 'ADMIN') return false;
 
-      if (!hasAllRoles) return false;
-    }
+    return true;
+  } catch (err) {
+    return false;
   }
-
-  return true;
 };

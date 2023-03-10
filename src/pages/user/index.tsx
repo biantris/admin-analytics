@@ -1,6 +1,12 @@
-import Head from 'next/head';
+import { GetServerSideProps } from 'next';
 import { Nav } from '../../components/Nav';
 import { WrapperDash } from '../../components/WrapperDash';
+import { withSSRAuth } from '../../utils/auth/withSSRAuth';
+
+import Head from 'next/head';
+import { parseCookies } from 'nookies';
+import { getUser } from '../../service/userApi/user';
+import { getInfosDecodedToken } from '../../utils/getInfosDecodedToken';
 
 const User = () => {
   return (
@@ -29,5 +35,27 @@ const User = () => {
     </div>
   );
 };
+
+export const getServerSideProps: GetServerSideProps = withSSRAuth(
+  async (ctx) => {
+    const { 'adminAnalytics.token': token } = parseCookies(ctx);
+    const userId = await getInfosDecodedToken(token);
+
+    const { access_level } = await getUser({ ctx, id: userId });
+
+    if (!access_level || access_level !== 'ADMIN') {
+      return {
+        redirect: {
+          destination: '/dashboard',
+          permanent: false,
+        },
+      };
+    }
+
+    return {
+      props: {},
+    };
+  }
+);
 
 export default User;

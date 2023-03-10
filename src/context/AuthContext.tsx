@@ -8,7 +8,7 @@ import { destroyAllCookies } from '../utils/destroyAllCookies';
 import { getInfosDecodedToken } from '../utils/getInfosDecodedToken';
 
 export type User = {
-  _id: string;
+  id: string;
   name: string;
   email: string;
   access_level: string;
@@ -74,17 +74,18 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         const userId = await getInfosDecodedToken(token);
 
         await getUser({ id: userId })
-          .then((response) => {
-            const { _id, email, name, access_level } = response.user;
+          .then((userResponse) => {
+            const { id, email, name, access_level } = userResponse;
 
             setUser({
-              _id,
+              id,
               email,
               name,
               access_level,
             });
           })
-          .catch(() => {
+          .catch((err) => {
+            console.log(err);
             signOut();
           });
       }
@@ -98,7 +99,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         password,
       });
 
-      const { _id, token, name, access_level } = user;
+      const { id, token, name, access_level } = user;
 
       if (!token || !user) {
         throw 'E-mail ou senha incorreta!';
@@ -112,7 +113,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
       api.defaults.headers['Authorization'] = `${token}`;
 
       setUser({
-        _id,
+        id,
         email,
         name,
         access_level,
