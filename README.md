@@ -2,12 +2,6 @@
 
 <p align="center">A SPA build with NextJS</p>
 
-<p align="center">
-   <a href="https://github.com/biantris/graphql-relay-web/actions">
-      <img alt="Tests Passing" src="https://github.com/biantris/graphql-relay-web/actions/workflows/test.yml/badge.svg" />
-    </a>
-</p>
-
 <p align="center">🚧 WIP 🚧</p>
 
 > **Note**
@@ -30,7 +24,12 @@
 
 ### Pages
 
-[wip]
+<details>
+<summary>Login</summary>
+![NexSnap-Mar-10-2023_12-04-38_PM](https://user-images.githubusercontent.com/65451957/224350292-3b148da2-c38c-4142-abbd-2946d441eefc.png)
+
+</summary>
+</details>
 
 ### Project architecture
 
@@ -54,6 +53,6 @@ yarn dev
 http://localhost:3000
 ```
 
-## demo
+## Demo
 
 🔗 https://admin-analytics.vercel.app/
