@@ -1,23 +1,11 @@
+/* eslint-disable @next/next/no-html-link-for-pages */
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
-import { Fragment, useContext, useEffect } from 'react';
-import { AuthContext } from '../../context/AuthContext';
-import { api } from '../../service/apiClient';
+import { Fragment } from 'react';
 
 const navigation = ['Dashboard', 'Usuários'];
-const profile = ['Perfil'];
-
-const classNames = (...classes: string[]) => {
-  return classes.filter(Boolean).join(' ');
-};
 
 export const Nav = () => {
-  const { user } = useContext(AuthContext);
-
-  useEffect(() => {
-    api.get('/users');
-  }, []);
-
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -37,7 +25,6 @@ export const Nav = () => {
                     {navigation.map((item, itemIdx) =>
                       itemIdx === 0 ? (
                         <Fragment key={item}>
-                          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                           <a
                             href="/dashboard"
                             className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
@@ -46,7 +33,6 @@ export const Nav = () => {
                           </a>
                         </Fragment>
                       ) : (
-                        // eslint-disable-next-line @next/next/no-html-link-for-pages
                         <a
                           key={item}
                           href="/user"
@@ -73,12 +59,20 @@ export const Nav = () => {
                         <div>
                           <Menu.Button className="max-w-xs bg-gray-800 rounded-full flex items-center text-sm focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                             <span className="sr-only">Open user menu</span>
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                              className="h-8 w-8 rounded-full"
-                              src={'/img/profile-share.png'}
-                              alt=""
-                            />
+                            <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                              <svg
+                                className="absolute w-12 h-12 text-gray-400 -left-1"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                                  clipRule="evenodd"
+                                ></path>
+                              </svg>
+                            </div>
                           </Menu.Button>
                         </div>
                         <Transition
@@ -95,23 +89,7 @@ export const Nav = () => {
                             static
                             className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                           >
-                            {profile.map((item) => (
-                              <Menu.Item key={item}>
-                                {({ active }) => (
-                                  <a
-                                    href="#"
-                                    className={classNames(
-                                      active ? 'bg-gray-100' : '',
-                                      'block px-4 py-2 text-sm text-gray-700'
-                                    )}
-                                  >
-                                    {item}
-                                  </a>
-                                )}
-                              </Menu.Item>
-                            ))}
                             <Menu.Item>
-                              {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                               <a
                                 href="/"
                                 className="block px-4 py-2 text-sm text-gray-700"
@@ -126,6 +104,7 @@ export const Nav = () => {
                   </Menu>
                 </div>
               </div>
+
               <div className="-mr-2 flex md:hidden">
                 {/* Mobile menu button */}
                 <Disclosure.Button className="bg-gray-800 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
@@ -145,9 +124,8 @@ export const Nav = () => {
               {navigation.map((item, itemIdx) =>
                 itemIdx === 0 ? (
                   <Fragment key={item}>
-                    {/* Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" */}
                     <a
-                      href="#"
+                      href="/dashboard"
                       className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
                     >
                       {item}
@@ -156,7 +134,7 @@ export const Nav = () => {
                 ) : (
                   <a
                     key={item}
-                    href="#"
+                    href="/user"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                   >
                     {item}
@@ -166,13 +144,21 @@ export const Nav = () => {
             </div>
             <div className="pt-4 pb-3 border-t border-gray-700">
               <div className="flex items-center px-5">
-                <div className="flex-shrink-0">
-                  <img
-                    className="h-10 w-10 rounded-full"
-                    src={'/img/profile-share.png'}
-                    alt=""
-                  />
+                <div className="relative w-10 h-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
+                  <svg
+                    className="absolute w-12 h-12 text-gray-400 -left-1"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
                 </div>
+
                 <div className="ml-3">
                   <div className="text-base font-medium leading-none text-white">
                     Beatriz Oliveira
@@ -181,23 +167,15 @@ export const Nav = () => {
                     anabeatrizxoliveira@gmail.com
                   </div>
                 </div>
+
                 <button className="ml-auto bg-gray-800 flex-shrink-0 p-1 rounded-full text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white">
                   <span className="sr-only">View notifications</span>
                   <BellIcon className="h-6 w-6" aria-hidden="true" />
                 </button>
               </div>
               <div className="mt-3 px-2 space-y-1">
-                {profile.map((item) => (
-                  <a
-                    key={item}
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
-                  >
-                    {item}
-                  </a>
-                ))}
                 <a
-                  href="#"
+                  href="/"
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                 >
                   Sair
