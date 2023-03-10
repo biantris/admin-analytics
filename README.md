@@ -26,6 +26,7 @@
 
 <details>
 <summary>Login</summary>
+
 ![NexSnap-Mar-10-2023_12-04-38_PM](https://user-images.githubusercontent.com/65451957/224350292-3b148da2-c38c-4142-abbd-2946d441eefc.png)
 
 </summary>
