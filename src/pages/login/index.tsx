@@ -1,12 +1,15 @@
 import Head from 'next/head';
 import * as yup from 'yup';
 
+import { GetServerSideProps } from 'next';
+import { AuthContext } from '../../context/AuthContext';
+import { withSSRAuthLogged } from '../../utils/auth/withSSRAuthLogged';
+
 import { LockClosedIcon } from '@heroicons/react/solid';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import { AuthContext } from '../../context/AuthContext';
 
 type LoginData = {
   email: string;
@@ -161,3 +164,9 @@ const Login = () => {
 };
 
 export default Login;
+
+export const getServerSideProps: GetServerSideProps = withSSRAuthLogged(
+  async () => ({
+    props: {},
+  })
+);
