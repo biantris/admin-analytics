@@ -98,12 +98,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         password,
       });
 
-      const token = await createAuthenticationUser({
-        email,
-        password,
-      });
-
-      const { _id, name, access_level } = user;
+      const { _id, token, name, access_level } = user;
 
       if (!token || !user) {
         throw 'E-mail ou senha incorreta!';
@@ -114,7 +109,7 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         path: '/',
       });
 
-      api.defaults.headers.Authorization = `${token}`;
+      api.defaults.headers['Authorization'] = `${token}`;
 
       setUser({
         _id,
