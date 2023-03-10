@@ -2,13 +2,14 @@ import { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import { withSSRAuth } from '../../utils/auth/withSSRAuth';
 
-import { memo } from 'react';
 import { ChartPie } from '../../components/ChartPie';
 import { Nav } from '../../components/Nav';
 import { WrapperDash } from '../../components/WrapperDash';
+import { mapMemoryCPUData } from '../../domain/CpuUsageData';
 import { mapMemoryUsageData } from '../../domain/MemoryUsageData';
 import {
   getClusterStatusInfo,
+  getCpuUsageData,
   getMemoryUsageData,
 } from '../../service/helthCheckApi/helthCheck';
 
@@ -20,9 +21,10 @@ export type DataType = {
 interface IDashboardProps {
   status: string;
   dataPieMemory: DataType;
+  dataPieCPU: DataType;
 }
 
-const Dashboard = ({ status, dataPieMemory }: IDashboardProps) => {
+const Dashboard = ({ status, dataPieMemory, dataPieCPU }: IDashboardProps) => {
   return (
     <div>
       <Head>
@@ -43,7 +45,7 @@ const Dashboard = ({ status, dataPieMemory }: IDashboardProps) => {
             <h2 className="mt-6 text-center text-1xl font-semibold text-gray-900">
               Consumo de CPU
             </h2>
-            {/* <ChartPie data={dataPie} /> */}
+            <ChartPie data={dataPieCPU} />
           </div>
 
           <div className="flex flex-col justify-center p-1 h-96 w-80">
@@ -72,16 +74,21 @@ const Dashboard = ({ status, dataPieMemory }: IDashboardProps) => {
 export const getServerSideProps: GetServerSideProps = withSSRAuth(
   async (ctx) => {
     const { status } = await getClusterStatusInfo({ ctx });
+
     const dataPieMemory = await getMemoryUsageData({ ctx });
+    const dataPieCPU = await getCpuUsageData({ ctx });
+
     const listMemoryUsageData = mapMemoryUsageData(dataPieMemory);
+    const listCPUData = mapMemoryCPUData(dataPieCPU);
 
     return {
       props: {
         status,
         dataPieMemory: listMemoryUsageData,
+        dataPieCPU: listCPUData,
       },
     };
   }
 );
 
-export default memo(Dashboard);
+export default Dashboard;
