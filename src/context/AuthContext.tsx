@@ -50,7 +50,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   const isAuthenticated = !!user;
 
   useEffect(() => {
-    console.log('entrou no use effect');
     authChannel = new BroadcastChannel('auth');
 
     authChannel.onmessage = (message) => {
@@ -93,23 +92,20 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
   }, []);
 
   const signIn = async ({ email, password }: SignInCredentials) => {
-    console.log('Entrou no Sign in');
-
     try {
-      console.log('entrou no try catch');
+      const user = await createAuthenticationUser({
+        email,
+        password,
+      });
 
-      const { token, user } = await createAuthenticationUser({
+      const token = await createAuthenticationUser({
         email,
         password,
       });
 
       const { _id, name, access_level } = user;
 
-      console.log('user', user);
-
       if (!token || !user) {
-        console.log('entrou no if');
-
         throw 'E-mail ou senha incorreta!';
       }
 
@@ -117,8 +113,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         maxAge: 60 * 60 * 24 * 30, // 30 Days
         path: '/',
       });
-
-      console.log('passou no set cookie');
 
       api.defaults.headers.Authorization = `${token}`;
 
@@ -128,8 +122,6 @@ export const AuthProvider = ({ children }: AuthProviderProps) => {
         name,
         access_level,
       });
-
-      console.log('passou no set user');
 
       Router.push('/dashboard');
       authChannel.postMessage('signIn');
