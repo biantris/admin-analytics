@@ -10,7 +10,11 @@ import useAuth from '../../hooks/useAuth';
 const navigation = ['Dashboard', 'Usuários'];
 
 export const Nav = () => {
-  const { user } = useAuth();
+  const { user, signOut } = useAuth();
+
+  const handleLogout = () => {
+    signOut();
+  };
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -100,12 +104,12 @@ export const Nav = () => {
                             className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
                           >
                             <Menu.Item>
-                              <a
-                                href="/"
+                              <button
+                                onClick={handleLogout}
                                 className="block px-4 py-2 text-sm text-gray-700"
                               >
                                 Sair
-                              </a>
+                              </button>
                             </Menu.Item>
                           </Menu.Items>
                         </Transition>
@@ -188,12 +192,12 @@ export const Nav = () => {
                 </button>
               </div>
               <div className="mt-3 px-2 space-y-1">
-                <a
-                  href="/"
+                <button
+                  onClick={handleLogout}
                   className="block px-3 py-2 rounded-md text-base font-medium text-gray-400 hover:text-white hover:bg-gray-700"
                 >
                   Sair
-                </a>
+                </button>
               </div>
             </div>
           </Disclosure.Panel>
