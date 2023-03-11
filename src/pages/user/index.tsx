@@ -6,7 +6,6 @@ import { withSSRAuth } from '../../utils/auth/withSSRAuth';
 
 import Head from 'next/head';
 import { parseCookies } from 'nookies';
-import { Key } from 'react';
 import { getAllUser, getUser } from '../../service/userApi/user';
 import { getInfosDecodedToken } from '../../utils/getInfosDecodedToken';
 
@@ -14,7 +13,12 @@ interface IUserProps {
   userAll: {
     map(
       // eslint-disable-next-line no-unused-vars
-      arg0: (userAll: { id: Key | null | undefined }) => JSX.Element
+      arg0: (userAll: {
+        id: string;
+        name: string;
+        email: string;
+        access_level: string;
+      }) => JSX.Element
     ): import('react').ReactNode;
     name: string;
     email: string;
