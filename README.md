@@ -32,10 +32,6 @@
 </summary>
 </details>
 
-### Project architecture
-
-[wip]
-
 ### Getting Started
 
 - Set up the [server repository](https://github.com/biantris/admin-analytics-api) (note: it needs to be running together with the frontend)
