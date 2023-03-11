@@ -59,7 +59,7 @@
 <details>
 <summary>MENU MOBILE</summary>
 
-![NexSnap-Mar-11-2023_07-01-50_PM](https://user-images.githubusercontent.com/65451957/224513291-2c405808-afce-48f7-8cda-f5b3403137fb.png)
+![image](https://user-images.githubusercontent.com/65451957/224513339-0706b56b-2614-452e-a636-ad3dd65f12e3.png)
 
 </summary>
 </details>
