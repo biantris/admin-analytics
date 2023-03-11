@@ -2,7 +2,7 @@
 
 <p align="center">A SPA build with NextJS</p>
 
-<p align="center">🚧 WIP 🚧</p>
+<p align="center">🚧 WIP 🚧</p> 
 
 > **Note**
 > See Back-end project [admin-analytics-api](https://github.com/biantris/admin-analytics-api)
