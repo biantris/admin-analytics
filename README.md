@@ -82,6 +82,10 @@ yarn dev
 http://localhost:3000
 ```
 
+#### Run Storybook
+- `yarn storybook`
+![image](https://user-images.githubusercontent.com/65451957/188338652-8cabae6b-f16c-4c4f-943c-1be6e4884426.png)
+
 ## Demo
 
 🔗 https://admin-analytics.vercel.app/
