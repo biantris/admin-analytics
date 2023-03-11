@@ -84,7 +84,7 @@ http://localhost:3000
 
 #### Run Storybook
 - `yarn storybook`
-![image](https://user-images.githubusercontent.com/65451957/224513484-93fd6e01-75ba-49eb-894f-e963181ecb04.png)
+![image](https://user-images.githubusercontent.com/65451957/224513497-848b3560-a4a6-4cb7-81d3-bf3f1030f22e.png)
 
 ## Demo
 
