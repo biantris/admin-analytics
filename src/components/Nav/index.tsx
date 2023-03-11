@@ -5,12 +5,14 @@ import { BellIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { Fragment } from 'react';
 import { validateUserPermissions } from '../../utils/auth/validateUserPermissions';
 
+import { useRouter } from 'next/router';
 import useAuth from '../../hooks/useAuth';
 
 const navigation = ['Dashboard', 'Usuários'];
 
 export const Nav = () => {
   const { user, signOut } = useAuth();
+  const router = useRouter();
 
   const handleLogout = () => {
     signOut();
@@ -37,7 +39,10 @@ export const Nav = () => {
                         <Fragment key={item}>
                           <a
                             href="/dashboard"
-                            className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
+                            className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                              router.asPath === '/dashboard' &&
+                              'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                            }`}
                           >
                             {item}
                           </a>
@@ -48,7 +53,10 @@ export const Nav = () => {
                             <a
                               key={item}
                               href="/user"
-                              className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                              className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                                router.asPath === '/user' &&
+                                'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                              }`}
                             >
                               {item}
                             </a>
@@ -140,7 +148,10 @@ export const Nav = () => {
                   <Fragment key={item}>
                     <a
                       href="/dashboard"
-                      className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium"
+                      className={`text-gray-300 text-white block px-3 py-2 rounded-md text-base font-medium ${
+                        router.asPath === '/dashboard' &&
+                        'bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium'
+                      }`}
                     >
                       {item}
                     </a>
@@ -151,7 +162,10 @@ export const Nav = () => {
                       <a
                         key={item}
                         href="/user"
-                        className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                        className={`text-gray-300 text-white block px-3 py-2 rounded-md text-base font-medium ${
+                          router.asPath === '/user' &&
+                          'bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium'
+                        }`}
                       >
                         {item}
                       </a>
