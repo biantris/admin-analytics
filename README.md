@@ -32,6 +32,38 @@
 </summary>
 </details>
 
+<details>
+<summary>Dashboard [ADMIN]</summary>
+
+![NexSnap-Mar-11-2023_06-55-53_PM](https://user-images.githubusercontent.com/65451957/224513125-daf26cd9-fee8-4990-a769-091f899d4b21.png)
+
+</summary>
+</details>
+
+<details>
+<summary>Dashboard [USER]</summary>
+
+![NexSnap-Mar-11-2023_06-58-48_PM](https://user-images.githubusercontent.com/65451957/224513181-333ce503-4577-4da0-a26e-3177a9213a73.png)
+
+</summary>
+</details>
+
+<details>
+<summary>Users [ADMIN]</summary>
+
+![NexSnap-Mar-11-2023_07-00-16_PM](https://user-images.githubusercontent.com/65451957/224513225-d00f5b68-a080-4172-8478-d54f0b6d2780.png)
+
+</summary>
+</details>
+
+<details>
+<summary>MENU MOBILE</summary>
+
+![NexSnap-Mar-11-2023_07-01-50_PM](https://user-images.githubusercontent.com/65451957/224513291-2c405808-afce-48f7-8cda-f5b3403137fb.png)
+
+</summary>
+</details>
+
 ### Getting Started
 
 - Set up the [server repository](https://github.com/biantris/admin-analytics-api) (note: it needs to be running together with the frontend)
