@@ -1,7 +1,12 @@
 import { GetServerSidePropsContext } from 'next';
 import { GetCorrectApi } from '../../utils/GetCorrectApi';
 import { api as ApiClient } from '../apiClient';
-import { AuthUser, GetUserByEmail, GetUserById } from './userRoutes';
+import {
+  AuthUser,
+  GetAllUser,
+  GetUserByEmail,
+  GetUserById,
+} from './userRoutes';
 
 interface ICreateAuthenticateUser {
   email: string;
@@ -32,6 +37,21 @@ export const getUser = async ({ ctx, id }: IGetUser) => {
 
   try {
     const response = await api.get(GetUserById(id));
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
+
+interface IGetAllUser {
+  ctx?: GetServerSidePropsContext | undefined;
+}
+
+export const getAllUser = async ({ ctx }: IGetAllUser) => {
+  const api = GetCorrectApi(ctx);
+
+  try {
+    const response = await api.get(GetAllUser);
     return response.data;
   } catch (error) {
     return error;
