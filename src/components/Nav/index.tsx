@@ -174,18 +174,34 @@ export const Nav = () => {
                   </Fragment>
                 ) : (
                   <>
-                    {user !== null && validateUserPermissions(user) && (
-                      <a
-                        key={item}
-                        href="/user"
-                        className={`text-gray-300 text-white block px-3 py-2 rounded-md text-base font-medium ${
-                          router.asPath === '/user' &&
-                          'bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium'
-                        }`}
-                      >
-                        {item}
-                      </a>
-                    )}
+                    <>
+                      {user !== null && validateUserPermissions(user) && (
+                        <a
+                          key={item}
+                          href="/user"
+                          className={`text-gray-300 text-white block px-3 py-2 rounded-md text-base font-medium ${
+                            router.asPath === '/user' &&
+                            'bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium'
+                          }`}
+                        >
+                          {item}
+                        </a>
+                      )}
+                    </>
+                    <>
+                      {user !== null && validateUserPermissions(user) && (
+                        <a
+                          key={2}
+                          href="/user/create"
+                          className={`text-gray-300 text-white block px-3 py-2 rounded-md text-base font-medium ${
+                            router.asPath === '/user/create' &&
+                            'bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium'
+                          }`}
+                        >
+                          {'Novo Usuário'}
+                        </a>
+                      )}
+                    </>
                   </>
                 )
               )}
