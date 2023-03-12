@@ -37,22 +37,13 @@ const User = ({ userAll }: IUserProps) => {
 
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Usuários</h1>
         </div>
       </header>
 
       <main>
-        <div className="flex justify-end max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 p-3">
-          <button className="bg-transparent hover:bg-gray-800 text-gray-800 font-semibold hover:text-white py-2 px-4 border border-gray-800 hover:border-transparent rounded">
-            Novo Usuário
-          </button>
-        </div>
         <WrapperDash>
           <div className="flex flex-col justify-center items-center p-1 h-full w-full">
-            <h2 className="text-center text-1xl font-semibold p-3 text-gray-900">
-              Usuários
-            </h2>
-
             <div className="overflow-x-auto p-3 pb-8">
               <table className="table w-full">
                 <thead>
