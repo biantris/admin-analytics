@@ -22,44 +22,54 @@
 - [ ] [React Testing Library](https://testing-library.com/)
 - [x] [Vercel](https://vercel.com/) (Deploy)
 
+### To-do
+- [x] Login and cokies
+- [x] Dashboard
+- [x] Show endpoint data through graphs
+- [x] Check routes for ADMIN flag (back and front)
+- [x] User List page
+- [x] User Crate page
+- [x] Rate Limit on create user endpoint
+- [x] Responsive
+
 ### Pages
 
 <details>
-<summary>Login</summary>
+<summary><b>Login</b></summary>
 
-![NexSnap-Mar-10-2023_12-04-38_PM](https://user-images.githubusercontent.com/65451957/224350292-3b148da2-c38c-4142-abbd-2946d441eefc.png)
-
-</summary>
-</details>
-
-<details>
-<summary>Dashboard [ADMIN]</summary>
-
-![NexSnap-Mar-11-2023_06-55-53_PM](https://user-images.githubusercontent.com/65451957/224513125-daf26cd9-fee8-4990-a769-091f899d4b21.png)
+![image](https://user-images.githubusercontent.com/65451957/224522618-a014f88a-f0bd-4ba0-a71b-3b4b1a727634.png)
 
 </summary>
 </details>
 
 <details>
-<summary>Dashboard [USER]</summary>
+<summary><b>Dashboard [ADMIN]</b></summary>
 
-![NexSnap-Mar-11-2023_06-58-48_PM](https://user-images.githubusercontent.com/65451957/224513181-333ce503-4577-4da0-a26e-3177a9213a73.png)
-
-</summary>
-</details>
-
-<details>
-<summary>Users [ADMIN]</summary>
-
-![NexSnap-Mar-11-2023_07-00-16_PM](https://user-images.githubusercontent.com/65451957/224513225-d00f5b68-a080-4172-8478-d54f0b6d2780.png)
+![image](https://user-images.githubusercontent.com/65451957/224522640-91906b84-3ba6-4657-a994-a19807c60b59.png)
 
 </summary>
 </details>
 
 <details>
-<summary>MENU MOBILE</summary>
+<summary><b>Dashboard [USER]</b></summary>
 
-![image](https://user-images.githubusercontent.com/65451957/224513339-0706b56b-2614-452e-a636-ad3dd65f12e3.png)
+![image](https://user-images.githubusercontent.com/65451957/224522747-8c7ad068-142b-4ca7-b96b-879a8d5f4956.png)
+
+</summary>
+</details>
+
+<details>
+<summary><b>Users [ADMIN]</b></summary>
+
+![image](https://user-images.githubusercontent.com/65451957/224522685-48992ba9-2a68-422f-8b4b-26d9668a668e.png)
+
+</summary>
+</details>
+
+<details>
+<summary><b>Users Create [ADMIN]</b></summary>
+
+![image](https://user-images.githubusercontent.com/65451957/224522700-433012b8-a157-4bc2-a351-2ad03f64c875.png)
 
 </summary>
 </details>
