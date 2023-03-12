@@ -35,6 +35,7 @@
 - [x] User Crate page
 - [x] Rate Limit on create user endpoint
 - [x] Responsive
+- [ ] Testing
 
 ### Pages
 
