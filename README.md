@@ -95,8 +95,9 @@
 
 ### Getting Started
 
-- Set up the [server repository](https://github.com/biantris/admin-analytics-api) (note: it needs to be running together with the frontend)
+- Set up the [server repository](https://github.com/biantris/admin-analytics-api) ( Note: it needs to be running together with the frontend )
 - Clone this repo
+- Create a new `.env.local` file and copy the contents of `.env.example` into it
 
 ```sh
 # install dependencies
