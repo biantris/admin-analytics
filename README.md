@@ -1,3 +1,7 @@
+<div align="center">
+    <img width="90" src="public/img/profile-share.png" />
+</div>
+
 <h1 align="center">Admin Analytics</h1>
 
 <p align="center">A SPA build with NextJS</p>
