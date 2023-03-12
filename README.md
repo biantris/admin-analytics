@@ -97,6 +97,17 @@ yarn dev
 http://localhost:3000
 ```
 
+### Users to Login
+```sh
+#ADMIN
+> admin@gmail.com
+> 12345678
+
+#USER
+> user@gmail.com
+> 12345678
+```
+
 #### Run Storybook
 - `yarn storybook`
 ![image](https://user-images.githubusercontent.com/65451957/224513497-848b3560-a4a6-4cb7-81d3-bf3f1030f22e.png)
