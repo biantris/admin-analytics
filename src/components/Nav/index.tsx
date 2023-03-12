@@ -49,18 +49,34 @@ export const Nav = () => {
                         </Fragment>
                       ) : (
                         <>
-                          {user !== null && validateUserPermissions(user) && (
-                            <a
-                              key={item}
-                              href="/user"
-                              className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
-                                router.asPath === '/user' &&
-                                'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
-                              }`}
-                            >
-                              {item}
-                            </a>
-                          )}
+                          <>
+                            {user !== null && validateUserPermissions(user) && (
+                              <a
+                                key={item}
+                                href="/user"
+                                className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                                  router.asPath === '/user' &&
+                                  'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                                }`}
+                              >
+                                {item}
+                              </a>
+                            )}
+                          </>
+                          <>
+                            {user !== null && validateUserPermissions(user) && (
+                              <a
+                                key={2}
+                                href="/user/create"
+                                className={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${
+                                  router.asPath === '/user/create' &&
+                                  'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium'
+                                }`}
+                              >
+                                {'Novo Usuário'}
+                              </a>
+                            )}
+                          </>
                         </>
                       )
                     )}

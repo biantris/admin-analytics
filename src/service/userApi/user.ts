@@ -3,6 +3,7 @@ import { GetCorrectApi } from '../../utils/GetCorrectApi';
 import { api as ApiClient } from '../apiClient';
 import {
   AuthUser,
+  CreateUser,
   GetAllUser,
   GetUserByEmail,
   GetUserById,
@@ -20,6 +21,29 @@ export const createAuthenticationUser = async ({
   const data = { email, password };
   try {
     const response = await ApiClient.post(AuthUser, data);
+
+    return response.data;
+  } catch (error) {
+    return error;
+  }
+};
+
+interface ICreateUser {
+  name: string;
+  email: string;
+  password: string;
+  access_level: string;
+}
+
+export const createUser = async ({
+  name,
+  email,
+  password,
+  access_level,
+}: ICreateUser) => {
+  const data = { name, email, password, access_level };
+  try {
+    const response = await ApiClient.post(CreateUser, data);
 
     return response.data;
   } catch (error) {
