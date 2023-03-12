@@ -79,6 +79,20 @@
 </summary>
 </details>
 
+<details>
+<summary><b>RESPONSIVE</b></summary>
+
+![image](https://user-images.githubusercontent.com/65451957/224557108-dafe3a2b-e941-4da8-926c-b0ba1f4a59ce.png)
+
+![image](https://user-images.githubusercontent.com/65451957/224557136-90030a93-1b6e-410f-a7d7-020d7354cd44.png)
+
+![image](https://user-images.githubusercontent.com/65451957/224557165-88d5772d-d689-4b33-afd1-0dafcb8a3dc6.png)
+
+![image](https://user-images.githubusercontent.com/65451957/224557179-6e7bfaff-2811-42b7-b9b4-84a94b9886f2.png)
+
+</summary>
+</details>
+
 ### Getting Started
 
 - Set up the [server repository](https://github.com/biantris/admin-analytics-api) (note: it needs to be running together with the frontend)
