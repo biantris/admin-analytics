@@ -23,7 +23,7 @@
   "dependencies": {
     "@headlessui/react": "^1.7.14",
     "@heroicons/react": "^1.0.6",
-    "@hookform/resolvers": "^3.0.0",
+    "@hookform/resolvers": "^3.0.1",
     "@nivo/bar": "^0.80.0",
     "@nivo/core": "^0.80.0",
     "@nivo/line": "^0.80.0",
