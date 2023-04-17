@@ -2361,14 +2361,14 @@
     core-js "^3.8.2"
     global "^4.4.0"
 
-"@storybook/client-logger@7.0.4", "@storybook/client-logger@^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0":
+"@storybook/client-logger@7.0.4":
   version "7.0.4"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-7.0.4.tgz#ba124eb308b05323cf4d17be944de928e9655734"
   integrity sha512-3sEUIt6/ry+RdTpP+6Ic1QqoQh6Pn9ugCaP54Bc0z4wDI+NIJtJ5E2j4bcml/1/l9h9zNlmAAMgpZizm8KtIdA==
   dependencies:
     "@storybook/global" "^5.0.0"
 
-"@storybook/client-logger@7.0.5":
+"@storybook/client-logger@7.0.5", "@storybook/client-logger@^7.0.0-beta.0 || ^7.0.0-rc.0 || ^7.0.0":
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-7.0.5.tgz#9655534a88bd61a3824024dd960d2d82bcaeaded"
   integrity sha512-p8Vtb5G/l3gePNDbNjqgGsikthRqDfsPAqFEsAvBWJVZ3vq/ZSU4IsCWSLO/kdkyJyhTXMqQZnOpQ0pDXlOPcQ==
@@ -2443,13 +2443,13 @@
     unfetch "^4.2.0"
     util-deprecate "^1.0.2"
 
-"@storybook/core-client@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/core-client/-/core-client-7.0.4.tgz#291e6c5f7a677851447e4e780fb1006db9a00f78"
-  integrity sha512-BzTKIrPl8wPRh6KrlcVdGyIrRaFGlL1Ygg0j2OgF5KvRoU/WXKN8cw3sV7hHgHsK35wXRV9IfKfu7Qo02rFOLg==
+"@storybook/core-client@7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/core-client/-/core-client-7.0.5.tgz#933fafdaa840f48fa9c005ec00b948a127df667a"
+  integrity sha512-vN3jK0H4IRjdn/VP7E5dtY0MjytTFSosreSzschmSDTs/K9w52Zm+PkmDzQaBtrDo/VNjJCHnxDLDJZ1ewkoEw==
   dependencies:
-    "@storybook/client-logger" "7.0.4"
-    "@storybook/preview-api" "7.0.4"
+    "@storybook/client-logger" "7.0.5"
+    "@storybook/preview-api" "7.0.5"
 
 "@storybook/core-common@6.5.16":
   version "6.5.16"
@@ -2628,19 +2628,6 @@
   integrity sha512-uk+jMXCZ8t38jSTHk2o5btI+aV2Ksbvl6DoOv3r6VaCM1KZqeuMwtwywIQdflkA8/6q/dKT8z8L+g8hC4GC3VQ==
   dependencies:
     type-fest "^2.19.0"
-
-"@storybook/docs-tools@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/docs-tools/-/docs-tools-7.0.4.tgz#46afaa319e4c48c07abc2a2b6ea611cfdaa64d4d"
-  integrity sha512-X4hci6NWcOLAqBszqsHi1liqgCwc7gCqqnX4OXJ0uCkb9OD/aY+dDTeShPXhNxKNLt98o/OyEv+Qr7ngP5la2A==
-  dependencies:
-    "@babel/core" "^7.12.10"
-    "@storybook/core-common" "7.0.4"
-    "@storybook/preview-api" "7.0.4"
-    "@storybook/types" "7.0.4"
-    "@types/doctrine" "^0.0.3"
-    doctrine "^3.0.0"
-    lodash "^4.17.21"
 
 "@storybook/docs-tools@7.0.5":
   version "7.0.5"
@@ -2861,28 +2848,23 @@
   resolved "https://registry.yarnpkg.com/@storybook/preview/-/preview-7.0.4.tgz#2aaae9a9302e94cf671e36b7c452700ac8200abc"
   integrity sha512-4KQudrOxX7wylMLv0fDMI8RzPI6oSxbFsiR2ilufjyziMCkjxo48Pe1NBCPWeEedY6pUdfh8+iJ7P2Bcvi1nTQ==
 
-"@storybook/react-dom-shim@7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.0.4.tgz#43451d66cf550a3dd9d6f08fe675436b2bc812b0"
-  integrity sha512-h1pgJdAKRhnQxeAyqX2TftCUvpdBKhQ/2CpOcv+YptONOEWgIWfjatTTIkqNeIQu2XzzKuWwLZyfZrtZcY+1qg==
-
 "@storybook/react-dom-shim@7.0.5":
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/react-dom-shim/-/react-dom-shim-7.0.5.tgz#ebfc224a20ae816da54f3f70f62ed301439193b9"
   integrity sha512-iSdP73Af/d8RdNfa4rDHI3JuAakDqPl8Z1LT0cFcfzg29kihdmXIVaLvMcMqTrnqELU6VmzSiE86U+T1XOX95w==
 
-"@storybook/react@^7.0.4":
-  version "7.0.4"
-  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.4.tgz#20d40dcc21dfbc91ba71270e70c1d086497a2064"
-  integrity sha512-jKDlCLbJ3iABbXJYS5KUfBrlkAw7CmCcrGcq0oKn/iN3Hrl6+CobISMWcub2RTb/HuAhKabGHEa2J1qvDLNKSg==
+"@storybook/react@^7.0.5":
+  version "7.0.5"
+  resolved "https://registry.yarnpkg.com/@storybook/react/-/react-7.0.5.tgz#6e3f30c02ffd717f57f37635a67ccd235c23fdf4"
+  integrity sha512-VXLi/oZnYLXe61Bvfan1YY6cANbFgDb5MmCpu8COaYOGjT53o4gTh3zQoDubaN8wzTQfE0TyP9E+m4//KvZxow==
   dependencies:
-    "@storybook/client-logger" "7.0.4"
-    "@storybook/core-client" "7.0.4"
-    "@storybook/docs-tools" "7.0.4"
+    "@storybook/client-logger" "7.0.5"
+    "@storybook/core-client" "7.0.5"
+    "@storybook/docs-tools" "7.0.5"
     "@storybook/global" "^5.0.0"
-    "@storybook/preview-api" "7.0.4"
-    "@storybook/react-dom-shim" "7.0.4"
-    "@storybook/types" "7.0.4"
+    "@storybook/preview-api" "7.0.5"
+    "@storybook/react-dom-shim" "7.0.5"
+    "@storybook/types" "7.0.5"
     "@types/escodegen" "^0.0.6"
     "@types/estree" "^0.0.51"
     "@types/node" "^16.0.0"
