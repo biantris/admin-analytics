@@ -63,7 +63,7 @@
     "cross-env": "^7.0.3",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.4",
-    "eslint-plugin-storybook": "^0.6.11",
+    "eslint-plugin-storybook": "^0.6.12",
     "husky": "^8.0.3",
     "next-auth": "^4.22.1",
     "postcss": "^8.4.23",
