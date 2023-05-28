@@ -47,16 +47,13 @@ const Create = () => {
     try {
       await createUser(data);
 
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-
       toast.success('Seu usuário foi criado com sucesso!');
-      Router.push('/user');
+      await Router.push('/user');
     } catch (error) {
       toast.error('Algum dos campos está inválido!');
+    } finally {
       setLoading(false);
-    }
+    }	
   };
 
   return (
