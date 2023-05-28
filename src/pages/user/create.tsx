@@ -3,6 +3,7 @@ import * as yup from 'yup';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 import { GetServerSideProps } from 'next';
+import Router from 'next/router';
 import { parseCookies } from 'nookies';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -46,15 +47,13 @@ const Create = () => {
     try {
       await createUser(data);
 
-      setTimeout(() => {
-        setLoading(false);
-      }, 2000);
-
-      toast.success('Seu User foi criado com sucesso, veja na Aba Usuários!');
+      toast.success('Seu usuário foi criado com sucesso!');
+      await Router.push('/user');
     } catch (error) {
       toast.error('Algum dos campos está inválido!');
+    } finally {
       setLoading(false);
-    }
+    }	
   };
 
   return (
