@@ -21,7 +21,7 @@
     "storybook": "start-storybook -p 6006"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.16",
+    "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^1.0.6",
     "@hookform/resolvers": "^3.2.0",
     "@nivo/bar": "^0.80.0",
