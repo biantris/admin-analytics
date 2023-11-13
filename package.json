@@ -65,7 +65,7 @@
     "eslint-config-next": "14.0.2",
     "eslint-plugin-storybook": "^0.6.15",
     "husky": "^8.0.3",
-    "next-auth": "^4.24.4",
+    "next-auth": "^4.24.5",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
     "storybook-addon-next-router": "^4.0.2",
