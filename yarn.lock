@@ -2736,20 +2736,20 @@
     ts-dedent "^2.0.0"
     util-deprecate "^1.0.2"
 
-"@storybook/builder-webpack5@^7.6.4":
-  version "7.6.4"
-  resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-7.6.4.tgz#9ad8cd4811fe1b82d2244d705acf61f613d53206"
-  integrity sha512-J5wzPn/rsowlur5A7W9pAfN3a5fMapOoHaZsDKUklGRud/JUeabAIVdL1P/eX+yE3xaJk9auYivEWbglSx2Kpg==
+"@storybook/builder-webpack5@^7.6.5":
+  version "7.6.5"
+  resolved "https://registry.yarnpkg.com/@storybook/builder-webpack5/-/builder-webpack5-7.6.5.tgz#c5eb2d5282df4c97c56d71f77203e2db03aced93"
+  integrity sha512-Lf4jVHGTQRSLIcgXHG2webiFlNwEV8uo2CmDucU2IDV9p3NdloyOmCou40G6Du1hobBTflx8Zj2j9n3A5/+0GA==
   dependencies:
     "@babel/core" "^7.23.2"
-    "@storybook/channels" "7.6.4"
-    "@storybook/client-logger" "7.6.4"
-    "@storybook/core-common" "7.6.4"
-    "@storybook/core-events" "7.6.4"
-    "@storybook/core-webpack" "7.6.4"
-    "@storybook/node-logger" "7.6.4"
-    "@storybook/preview" "7.6.4"
-    "@storybook/preview-api" "7.6.4"
+    "@storybook/channels" "7.6.5"
+    "@storybook/client-logger" "7.6.5"
+    "@storybook/core-common" "7.6.5"
+    "@storybook/core-events" "7.6.5"
+    "@storybook/core-webpack" "7.6.5"
+    "@storybook/node-logger" "7.6.5"
+    "@storybook/preview" "7.6.5"
+    "@storybook/preview-api" "7.6.5"
     "@swc/core" "^1.3.82"
     "@types/node" "^18.0.0"
     "@types/semver" "^7.3.4"
@@ -3083,14 +3083,14 @@
   dependencies:
     ts-dedent "^2.0.0"
 
-"@storybook/core-webpack@7.6.4":
-  version "7.6.4"
-  resolved "https://registry.yarnpkg.com/@storybook/core-webpack/-/core-webpack-7.6.4.tgz#fd9ff9eb54cfd57c6f1a3642b0605e9c80999044"
-  integrity sha512-+C2YddhOhO0Lp9KngzX9XYJZKzCzo4vjXA3IMXxSA7Vo7gFhaa8uQTAXnUx7xCrvFXM/iiHUY1SN+VppB0eBdA==
+"@storybook/core-webpack@7.6.5":
+  version "7.6.5"
+  resolved "https://registry.yarnpkg.com/@storybook/core-webpack/-/core-webpack-7.6.5.tgz#05f58b11cacaa51e6f5e02943640491ee5977737"
+  integrity sha512-if5ixN2W3e8vwYvgFHq+k0FOSVwgolbPRLDeOToPXHAJjH/TmgGEANZLFAVVwEzsS4KOfRGJQ48KzF0knTsqzA==
   dependencies:
-    "@storybook/core-common" "7.6.4"
-    "@storybook/node-logger" "7.6.4"
-    "@storybook/types" "7.6.4"
+    "@storybook/core-common" "7.6.5"
+    "@storybook/node-logger" "7.6.5"
+    "@storybook/types" "7.6.5"
     "@types/node" "^18.0.0"
     ts-dedent "^2.0.0"
 
@@ -3308,10 +3308,10 @@
     unfetch "^4.2.0"
     util-deprecate "^1.0.2"
 
-"@storybook/preview@7.6.4":
-  version "7.6.4"
-  resolved "https://registry.yarnpkg.com/@storybook/preview/-/preview-7.6.4.tgz#36cca1d10fd3729f1a68789d95bfc400e33aa616"
-  integrity sha512-p9xIvNkgXgTpSRphOMV9KpIiNdkymH61jBg3B0XyoF6IfM1S2/mQGvC89lCVz1dMGk2SrH4g87/WcOapkU5ArA==
+"@storybook/preview@7.6.5":
+  version "7.6.5"
+  resolved "https://registry.yarnpkg.com/@storybook/preview/-/preview-7.6.5.tgz#d86bfe0b528f238fee8a4384a49eb24945d5c5dc"
+  integrity sha512-zmLa7C7yFGTYhgGZXoecdww9rx0Z5HpNi/GDBRWoNSK+FEdE8Jj2jF5NJ2ncldtYIyegz9ku29JFMKbhMj9K5Q==
 
 "@storybook/react-dom-shim@7.6.5":
   version "7.6.5"
