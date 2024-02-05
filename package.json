@@ -51,7 +51,7 @@
     "@storybook/addon-interactions": "^7.6.12",
     "@storybook/addon-links": "^7.6.12",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/builder-webpack5": "^7.6.11",
+    "@storybook/builder-webpack5": "^7.6.12",
     "@storybook/manager-webpack5": "^6.4.20",
     "@storybook/react": "^7.6.12",
     "@storybook/testing-library": "^0.2.2",
